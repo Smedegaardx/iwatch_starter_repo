@@ -24,44 +24,14 @@
 /* Hovedgrid */
 .grid-container {
   display: grid;
-  grid-template-columns: 10dvh 2fr 1fr auto 10dvh;
-  grid-template-rows: 1fr 2fr 0.5fr 0.8fr 2dvh;
+  grid-template-columns: 65px auto auto auto 65px;
+  grid-template-rows: 1fr 2fr 0.5fr 0.8fr 1dvh;
   width: 1340px;
   height: 900px;
   border-radius: 25px;
   background-color: var(--background-blue);
   margin-inline: auto;
-}
-
-/* knap */
-.buyButton {
-  border: 3px solid var(--white);
-  color: var(--white);
-  border-radius: 100px;
-  background-color: var(--background-blue);
-  padding: 0.8rem 3rem;
-  font-size: 24px;
-  align-self: start start;
-  grid-column: 2;
-  grid-row: 3;
-  width: fit-content;
-  height: fit-content;
-}
-
-/* Text */
-.heading {
-  grid-column: 2;
-  grid-row: 2;
-  align-self: center;
-  .headingText {
-    font-size: 64px;
-    color: var(--white);
-    font-weight: 200;
-    letter-spacing: 0.2rem;
-    span {
-      font-family: PoppinsBold;
-    }
-  }
+  margin-block: 2rem;
 }
 
 /* Navigationsbar / Header */
@@ -113,6 +83,91 @@
         border-radius: 25px;
         font-family: PoppinsBold;
       }
+    }
+  }
+}
+
+/* Knap */
+.buyButton {
+  border: 3px solid var(--white);
+  color: var(--white);
+  border-radius: 100px;
+  background-color: var(--background-blue);
+  padding: 0.8rem 5rem;
+  font-size: 24px;
+  align-self: start start;
+  grid-column: 2;
+  grid-row: 3;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* Text */
+.heading {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  .headingText {
+    font-size: 60px;
+    color: var(--white);
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    span {
+      font-family: PoppinsBold;
+    }
+  }
+}
+
+/* Page Knapper */
+.page-buttons {
+  grid-column: 2;
+  grid-row: 4;
+  align-self: start end;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: var(--white);
+  font-size: 14px;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Ur billede */
+.watch-image {
+  grid-column: 3;
+  grid-row: 2 / span 2;
+}
+
+.color-circles {
+  grid-column: 4;
+  grid-row: 2;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  div:not(.vl) {
+    width: 20px;
+    height: 20px;
+    border-radius: 900px;
+    border: 2px solid var(--white);
+    z-index: 100;
+    &:first-of-type {
+      background-color: var(--navy);
+      width: 30px;
+      height: 30px;
+      border-width: 4px;
+      box-shadow: 0 0 3px
+        oklch(0.1617 0.0309 235.72 / 82.6%);
+    }
+    &:nth-of-type(2) {
+      background-color: var(--mint);
+    }
+    &:last-of-type {
+      background-color: var(--ocean);
     }
   }
 }
