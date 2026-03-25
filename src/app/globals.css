@@ -25,7 +25,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: 65px 50% 33% auto 65px;
-  grid-template-rows: 1fr 2fr 0.5fr 0.65fr 65px;
+  grid-template-rows: 0.6fr 2fr 0.3fr 0.65fr 65px;
   width: 1340px;
   height: 900px;
   border-radius: 25px;
