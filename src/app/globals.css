@@ -21,11 +21,11 @@
   padding: 0;
 }
 
-/* Hovedgrid */
+/* Main grid */
 .grid-container {
   display: grid;
-  grid-template-columns: 65px auto auto auto 65px;
-  grid-template-rows: 1fr 2fr 0.5fr 0.8fr 1dvh;
+  grid-template-columns: 65px 50% 33% auto 65px;
+  grid-template-rows: 1fr 2fr 0.5fr 0.65fr 65px;
   width: 1340px;
   height: 900px;
   border-radius: 25px;
@@ -34,7 +34,7 @@
   margin-block: 2rem;
 }
 
-/* Navigationsbar / Header */
+/* Navigationbar / Header */
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -87,8 +87,8 @@
   }
 }
 
-/* Knap */
-.buyButton {
+/* Button */
+.buy-button {
   border: 3px solid var(--white);
   color: var(--white);
   border-radius: 100px;
@@ -118,11 +118,12 @@
   }
 }
 
-/* Page Knapper */
+/* Page buttons */
 .page-buttons {
   grid-column: 2;
   grid-row: 4;
-  align-self: start end;
+  align-self: end;
+  justify-self: start;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -135,12 +136,13 @@
   }
 }
 
-/* Ur billede */
+/* iWatch image*/
 .watch-image {
   grid-column: 3;
   grid-row: 2 / span 2;
 }
 
+/* Circles next to image */
 .color-circles {
   grid-column: 4;
   grid-row: 2;
@@ -148,8 +150,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  div:not(.vl) {
+  div {
     width: 20px;
     height: 20px;
     border-radius: 900px;
@@ -167,6 +168,52 @@
       background-color: var(--mint);
     }
     &:last-of-type {
+      background-color: var(--ocean);
+    }
+  }
+  .dots {
+    color: var(--white);
+    rotate: 90deg;
+    height: 30px;
+    width: auto;
+  }
+}
+
+/* Color picker with preview */
+.color-selector {
+  grid-column: 3;
+  grid-row: 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: end;
+  .watch-color {
+    display: grid;
+    grid-template-rows: 1fr;
+    .watch-img-small {
+      height: auto;
+      width: 90px;
+      margin-bottom: 10px;
+      grid-row: 1;
+      grid-column: 1;
+      z-index: 1;
+    }
+    .color-box {
+      border-radius: 10px;
+      width: 120%;
+      height: 70%;
+      grid-row: 1;
+      grid-column: 1;
+      align-self: end;
+      justify-self: center;
+    }
+    .navy {
+      background-color: var(--navy);
+    }
+    .mint {
+      background-color: var(--mint);
+    }
+    .ocean {
       background-color: var(--ocean);
     }
   }

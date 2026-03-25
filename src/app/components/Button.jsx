@@ -1,6 +1,8 @@
 const Button = () => {
   return (
-    <button className="buyButton">Buy now</button>
+    <button className="buy-button">
+      Buy now
+    </button>
   );
 };
 
